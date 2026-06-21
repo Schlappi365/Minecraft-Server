@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft Server</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #12121a);
+      color: white;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      color: #4ade80;
+    }
+
+    .ip-box {
+      margin-top: 15px;
+      font-size: 18px;
+      background: rgba(255,255,255,0.08);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .ip-box:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #60a5fa;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #4ade80;
+      color: black;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Mein Minecraft Server</h1>
+
+  <!-- HIER IP EINTRAGEN -->
+  <div class="ip-box" onclick="copyIP()">
+    IP: <span id="serverIP">dein.server.ip</span> (klicken zum kopieren)
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📜 Regeln</h2>
+    <ul>
+      <li>Kein Cheating oder Hacken</li>
+      <li>Respektiere alle Spieler</li>
+      <li>No Spam im Chat</li>
+      <li>Kein Griefing</li>
+      <li>Admins haben das letzte Wort</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ℹ️ Infos</h2>
+    <p>
+      Willkommen auf unserem Minecraft Server! Hier kannst du bauen, kämpfen und mit Freunden spielen.
+      Viel Spaß!
+    </p>
+    <button class="btn" onclick="alert('Viel Spaß auf dem Server! 🚀')">
+      Jetzt beitreten
+    </button>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Mein Minecraft Server
+</footer>
+
+<script>
+  function copyIP() {
+    const ip = document.getElementById("serverIP").innerText;
+    navigator.clipboard.writeText(ip);
+    alert("IP kopiert: " + ip);
+  }
+</script>
+
+</body>
+</html>
